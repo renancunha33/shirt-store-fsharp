@@ -8,9 +8,14 @@ open MonoTouch.Foundation
 type LoginViewController() as this =
     inherit UIViewController()
 
-    // TODO: Enter your Xamarin account email address here
-    // If you do not have a Xamarin Account please sign up here: https://store.xamarin.com/account/register
-    let XamarinAccountEmail = ""
+    // TODO Add your Xamarin account email address here (sign up at store.xamarin.com/account/register)
+    //
+    // In the C# version of this app, XamarinAccountEmail is just a string, with a default value of ""
+    // to indicate that no email address has been entered. F# has a type called option<'T> precisely for
+    // situations when a value may not be present. Here, XamarinAccountEmail is of type option<string>.
+    // Add your email by replacing 'None' with 'Some "x"', where x is your email address!
+    //
+    let XamarinAccountEmail = None
 
     let mutable ContentView:UIView = null
     let mutable LoginView = null
@@ -34,10 +39,7 @@ type LoginViewController() as this =
                                       this.ViewDidLayoutSubviews ())
 
     member val LoginSucceeded = fun () -> () with get,set
-       
-    member this.ShouldShowInstructions
-        with get () = XamarinAccountEmail = ""
-
+   
     override this.ViewDidLayoutSubviews () =
         let mutable bounds = this.View.Bounds
         ContentView.Frame <- bounds
@@ -50,14 +52,16 @@ type LoginViewController() as this =
         base.LoadView ()
         scrollView <- new UIScrollView (this.View.Bounds)
         this.View.AddSubview scrollView
-        if this.ShouldShowInstructions then
-            ContentView <- new PrefillXamarinAccountInstructionsView ()
-            scrollView.Add(ContentView)
-        else
-            LoginView <- new LoginView (XamarinAccountEmail)
-            LoginView.UserDidLogin <- fun _ -> this.Login XamarinAccountEmail LoginView.PasswordField.Text |> Async.StartImmediate
+        match XamarinAccountEmail with
+        | Some email ->
+            LoginView <- new LoginView(email)
+            LoginView.UserDidLogin <- fun _ ->
+                this.Login email LoginView.PasswordField.Text |> Async.StartImmediate
             ContentView <- LoginView
             scrollView.Add ContentView
+        | None ->
+            ContentView <- new PrefillXamarinAccountInstructionsView ()
+            scrollView.Add(ContentView)
 
 
     override this.ViewWillAppear animated =
