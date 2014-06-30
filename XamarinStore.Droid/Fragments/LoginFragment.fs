@@ -20,12 +20,12 @@ type LoginFragment() =
 
     // TODO Add your Xamarin account email address here (sign up at store.xamarin.com/account/register)
     //
-    // In the C# version of this app, XamarinAccountEmail is just a string, with a default value of ""
+    // In the C# version of this app, xamarinAccountEmail is just a string, with a default value of ""
     // to indicate that no email address has been entered. F# has a type called option<'T> precisely for
     // situations when a value may not be present. Here, XamarinAccountEmail is of type option<string>.
     // Add your email by replacing 'None' with 'Some "x"', where x is your email address!
     //
-    let XamarinAccountEmail = None
+    let xamarinAccountEmail = None
 
     let mutable password:EditText = null
     let mutable login:Button = null
@@ -53,7 +53,7 @@ type LoginFragment() =
     member private this.CreateInstructions (inflater:LayoutInflater) container savedInstanceState =
         let view = inflater.Inflate (Resource_Layout.PrefillXamarinAccountInstructions, null)
         let textView = view.FindViewById<TextView> (Resource_Id.codeTextView)
-        let coloredText = Html.FromHtml ("<font color='#48D1CC'>let</font> <font color='#1E90FF'></font> XamarinAccountEmail = ...")
+        let coloredText = Html.FromHtml ("<font color='#48D1CC'>let</font> <font color='#1E90FF'></font> xamarinAccountEmail = ...")
         textView.SetText (coloredText, TextView.BufferType.Spannable)
         view
 
@@ -84,7 +84,7 @@ type LoginFragment() =
         this.RetainInstance <- true
 
     override this.OnCreateView (inflater, container, savedInstanceState) =
-        match XamarinAccountEmail with
+        match xamarinAccountEmail with
         | None ->
             this.CreateInstructions inflater container savedInstanceState
         | Some email ->

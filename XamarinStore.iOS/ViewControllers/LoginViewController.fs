@@ -10,12 +10,12 @@ type LoginViewController() as this =
 
     // TODO Add your Xamarin account email address here (sign up at store.xamarin.com/account/register)
     //
-    // In the C# version of this app, XamarinAccountEmail is just a string, with a default value of ""
+    // In the C# version of this app, xamarinAccountEmail is just a string, with a default value of ""
     // to indicate that no email address has been entered. F# has a type called option<'T> precisely for
     // situations when a value may not be present. Here, XamarinAccountEmail is of type option<string>.
     // Add your email by replacing 'None' with 'Some "x"', where x is your email address!
     //
-    let XamarinAccountEmail = None
+    let xamarinAccountEmail = None
 
     let mutable ContentView:UIView = null
     let mutable LoginView = null
@@ -52,7 +52,7 @@ type LoginViewController() as this =
         base.LoadView ()
         scrollView <- new UIScrollView (this.View.Bounds)
         this.View.AddSubview scrollView
-        match XamarinAccountEmail with
+        match xamarinAccountEmail with
         | Some email ->
             LoginView <- new LoginView(email)
             LoginView.UserDidLogin <- fun _ ->
