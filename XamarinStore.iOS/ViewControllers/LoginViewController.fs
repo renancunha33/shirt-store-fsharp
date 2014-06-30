@@ -10,7 +10,7 @@ type LoginViewController() as this =
 
     // TODO: Enter your Xamarin account email address here
     // If you do not have a Xamarin Account please sign up here: https://store.xamarin.com/account/register
-    let xamarinAccountEmail = ""
+    let XamarinAccountEmail = ""
 
     let mutable ContentView:UIView = null
     let mutable LoginView = null
@@ -36,7 +36,7 @@ type LoginViewController() as this =
     member val LoginSucceeded = fun () -> () with get,set
        
     member this.ShouldShowInstructions
-        with get () = xamarinAccountEmail = ""
+        with get () = XamarinAccountEmail = ""
 
     override this.ViewDidLayoutSubviews () =
         let mutable bounds = this.View.Bounds
@@ -54,8 +54,8 @@ type LoginViewController() as this =
             ContentView <- new PrefillXamarinAccountInstructionsView ()
             scrollView.Add(ContentView)
         else
-            LoginView <- new LoginView (xamarinAccountEmail)
-            LoginView.UserDidLogin <- fun _ -> this.Login xamarinAccountEmail LoginView.PasswordField.Text |> Async.StartImmediate
+            LoginView <- new LoginView (XamarinAccountEmail)
+            LoginView.UserDidLogin <- fun _ -> this.Login XamarinAccountEmail LoginView.PasswordField.Text |> Async.StartImmediate
             ContentView <- LoginView
             scrollView.Add ContentView
 
