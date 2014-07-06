@@ -4,7 +4,7 @@ Run an F# app, get an F# shirt
 Get a snazzy shirt from the Xamarin Store App in just three simple steps, for free!
 
 1. __Install Xamarin__ - If you haven't already, [download Xamarin](http://www.xamarin.com/download).
-2. __Grab the Xamarin Store app__ - Download from [here](https://github.com/xamarin/xamarin-store-app/archive/master.zip).
+2. __Grab the Xamarin Store app__ - Download from [here](https://github.com/xamarin/shirt-store-fsharp/archive/master.zip).
 3. __Run the app__ - Open the app in Xamarin Studio or Visual Studio and press Play.
 
 If you have any questions, give Xamarin a call at +1 (855) 926-2746 or email [hello@xamarin.com](mailto:hello@xamarin.com).
