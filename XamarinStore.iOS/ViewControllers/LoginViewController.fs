@@ -13,7 +13,9 @@ type LoginViewController() as this =
     // In the C# version of this app, xamarinAccountEmail is just a string, with a default value of ""
     // to indicate that no email address has been entered. F# has a type called option<'T> precisely for
     // situations when a value may not be present. Here, xamarinAccountEmail is of type option<string>.
-    // Add your email by replacing 'None' with 'Some "x"', where x is your email address!
+    // Add your email by replacing None with Some "email@domain.com":
+    //
+    //    let xamarinAccountEmail = Some "email@domain.com"
     //
     let xamarinAccountEmail = None
 
