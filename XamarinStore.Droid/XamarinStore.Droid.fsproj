@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CF03036A-1002-4A97-8AF4-FC8185EFE35B}</ProjectGuid>
-    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{4925A630-B079-445D-BCD4-3A9C94FE9307};{F2A71F9B-5D33-465A-A702-920D77279786}</ProjectTypeGuids>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F2A71F9B-5D33-465A-A702-920D77279786}</ProjectTypeGuids>
+    <ProjectGuid>{cf03036a-1002-4a97-8af4-fc8185efe35b}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>XamarinStore</RootNamespace>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
@@ -45,113 +45,7 @@
     <ConsolePause>false</ConsolePause>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="mscorlib" />
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="FSharp.Core" />
-    <Reference Include="Mono.Android" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Components\json.net-4.5.11\lib\android\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Web.Services" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\Shared\Helpers.fs">
-      <Link>Shared\Helpers.fs</Link>
-    </Compile>
-    <Compile Include="..\Shared\UserModels.fs">
-      <Link>Shared\UserModels.fs</Link>
-    </Compile>
-    <Compile Include="..\Shared\XamarinSSOClient.fs">
-      <Link>Shared\XamarinSSOClient.fs</Link>
-    </Compile>
-    <Compile Include="..\Shared\Color.fs">
-      <Link>Shared\Color.fs</Link>
-    </Compile>
-    <Compile Include="..\Shared\Gravatar.fs">
-      <Link>Shared\Gravatar.fs</Link>
-    </Compile>
-    <Compile Include="..\Shared\User.fs">
-      <Link>Shared\User.fs</Link>
-    </Compile>
-    <Compile Include="..\Shared\Product.fs">
-      <Link>Shared\Product.fs</Link>
-    </Compile>
-    <Compile Include="..\Shared\Order.fs">
-      <Link>Shared\Order.fs</Link>
-    </Compile>
-    <Compile Include="..\Shared\FileCache.fs">
-      <Link>Shared\FileCache.fs</Link>
-    </Compile>
-    <Compile Include="..\Shared\WebService.fs">
-      <Link>Shared\WebService.fs</Link>
-    </Compile>
-    <Compile Include="Resources\Resource.designer.fs" />
-    <Compile Include="Helpers\Images.fs" />
-    <Compile Include="Helpers\MatrixEvaluator.fs" />
-    <Compile Include="Properties\AssemblyInfo.fs" />
-    <Compile Include="Drawables\BadgeDrawable.fs" />
-    <Compile Include="Drawables\KenBurnsDrawable.fs" />
-    <Compile Include="Drawables\CircleDrawable.fs" />
-    <Compile Include="Views\ViewSwipeTouchListener.fs" />
-    <Compile Include="Views\SwipableListItem.fs" />
-    <Compile Include="Views\XamarinSpinnerView.fs" />
-    <Compile Include="Views\SlidingLayout.fs" />
-    <Compile Include="Fragments\ShippingDetailsFragment.fs" />
-    <Compile Include="Fragments\BragFragment.fs" />
-    <Compile Include="Fragments\BasketFragment.fs" />
-    <Compile Include="Fragments\ProductListFragment.fs" />
-    <Compile Include="Fragments\ProductDetailsFragment.fs" />
-    <Compile Include="Fragments\LoginFragment.fs" />
-    <Compile Include="MainActivity.fs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\AboutAssets.txt" />
-    <None Include="Properties\AndroidManifest.xml" />
-    <None Include="Resources\AboutResources.txt" />
-    <None Include="res\drawable\icon.png" />
-    <None Include="res\layout\main.xml" />
-    <None Include="res\values\strings.xml" />
-    <None Include="Components\json.net-4.5.11.info" />
-    <None Include="Components\json.net-4.5.11.png" />
-    <None Include="Components\json.net-4.5.11\component\Details.md" />
-    <None Include="Components\json.net-4.5.11\component\GettingStarted.md" />
-    <None Include="Components\json.net-4.5.11\component\License.md" />
-    <None Include="Components\json.net-4.5.11\component\Manifest.xml" />
-    <None Include="Components\json.net-4.5.11\component\icons\json.net_128x128.png" />
-    <None Include="Components\json.net-4.5.11\component\icons\json.net_512x512.png" />
-    <None Include="Components\json.net-4.5.11\samples\Json.NET.Android.Sample\MainActivity.cs" />
-    <None Include="Components\json.net-4.5.11\samples\Json.NET.Android.Sample\Assets\AboutAssets.txt" />
-    <None Include="Components\json.net-4.5.11\samples\Json.NET.Android.Sample\Properties\AssemblyInfo.cs" />
-    <None Include="Components\json.net-4.5.11\samples\Json.NET.Android.Sample\Resources\AboutResources.txt" />
-    <None Include="Components\json.net-4.5.11\samples\Json.NET.Android.Sample\Resources\Resource.Designer.cs" />
-    <None Include="Components\json.net-4.5.11\samples\Json.NET.Android.Sample\Resources\Drawable\Icon.png" />
-    <None Include="Components\json.net-4.5.11\samples\Json.NET.Android.Sample\Resources\Layout\Main.axml" />
-    <None Include="Components\json.net-4.5.11\samples\Json.NET.Android.Sample\Resources\Values\Strings.xml" />
-    <None Include="Components\json.net-4.5.11\samples\Json.NET.iOS.Sample\AppDelegate.cs" />
-    <None Include="Components\json.net-4.5.11\samples\Json.NET.iOS.Sample\Default-568h%402x.png" />
-    <None Include="Components\json.net-4.5.11\samples\Json.NET.iOS.Sample\Info.plist" />
-    <None Include="Components\json.net-4.5.11\samples\Json.NET.iOS.Sample\Main.cs" />
-    <None Include="Components\json.net-4.5.11\samples\Json.NET.iOS.Sample\SampleViewController.cs" />
-    <None Include="Components\json.net-4.5.11\samples\Json.NET.iOS.Sample\SampleViewController.designer.cs" />
-    <None Include="Components\json.net-4.5.11\samples\Json.NET.iOS.Sample\SampleViewController.xib" />
-    <None Include="..\Shared\SharedScript.fsx">
-      <Link>Shared\SharedScript.fsx</Link>
-    </None>
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.FSharp.targets" />
-  <ItemGroup>
-    <Folder Include="Resources\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Views\" />
-    <Folder Include="Fragments\" />
-    <Folder Include="Drawables\" />
-    <Folder Include="Resources\values-v19\" />
-    <Folder Include="Shared\" />
-  </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\anim\add_to_basket_in.xml" />
     <AndroidResource Include="Resources\anim\basket_in.xml" />
@@ -241,15 +135,77 @@
     <AndroidResource Include="Resources\values-v19\Colors.xml" />
     <AndroidResource Include="Resources\values-v19\Strings.xml" />
     <AndroidResource Include="Resources\values-v19\themes.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\Thumbs.db" />
-    <AndroidResource Include="Resources\drawable-mdpi\Thumbs.db" />
-    <AndroidResource Include="Resources\drawable-xhdpi\Thumbs.db" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\Thumbs.db" />
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.fs" />
+    <None Include="Resources\AboutResources.txt" />
+    <Compile Include="..\Shared\Helpers.fs">
+      <Link>Shared\Helpers.fs</Link>
+    </Compile>
+    <Compile Include="..\Shared\UserModels.fs">
+      <Link>Shared\UserModels.fs</Link>
+    </Compile>
+    <Compile Include="..\Shared\XamarinSSOClient.fs">
+      <Link>Shared\XamarinSSOClient.fs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Color.fs">
+      <Link>Shared\Color.fs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Gravatar.fs">
+      <Link>Shared\Gravatar.fs</Link>
+    </Compile>
+    <Compile Include="..\Shared\User.fs">
+      <Link>Shared\User.fs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Product.fs">
+      <Link>Shared\Product.fs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Order.fs">
+      <Link>Shared\Order.fs</Link>
+    </Compile>
+    <Compile Include="..\Shared\FileCache.fs">
+      <Link>Shared\FileCache.fs</Link>
+    </Compile>
+    <Compile Include="..\Shared\WebService.fs">
+      <Link>Shared\WebService.fs</Link>
+    </Compile>
+    <None Include="..\Shared\SharedScript.fsx">
+      <Link>Shared\SharedScript.fsx</Link>
+    </None>
+    <Compile Include="Helpers\Images.fs" />
+    <Compile Include="Helpers\MatrixEvaluator.fs" />
+    <Compile Include="Properties\AssemblyInfo.fs" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <Compile Include="Drawables\BadgeDrawable.fs" />
+    <Compile Include="Drawables\KenBurnsDrawable.fs" />
+    <Compile Include="Drawables\CircleDrawable.fs" />
+    <Compile Include="Views\ViewSwipeTouchListener.fs" />
+    <Compile Include="Views\SwipableListItem.fs" />
+    <Compile Include="Views\XamarinSpinnerView.fs" />
+    <Compile Include="Views\SlidingLayout.fs" />
+    <Compile Include="Fragments\ShippingDetailsFragment.fs" />
+    <Compile Include="Fragments\BragFragment.fs" />
+    <Compile Include="Fragments\BasketFragment.fs" />
+    <Compile Include="Fragments\ProductListFragment.fs" />
+    <Compile Include="Fragments\ProductDetailsFragment.fs" />
+    <Compile Include="Fragments\LoginFragment.fs" />
+    <Compile Include="MainActivity.fs" />
+
     <XamarinComponentReference Include="json.net">
       <Version>4.5.11</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="FSharp.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Components\json.net-4.5.11\lib\android\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Services" />
   </ItemGroup>
 </Project>
